@@ -10,9 +10,9 @@ async function postJoke() {
       'https://www.reddit.com/r/Showerthoughts/new.json'
     );
     const Tweet = () => {
-      return `So I was thinking,\n\n${(
+      return `So I was thinking,\n${(
         jokeResponse.data.data.children[rand(25)].data.title
-      ).toLowerCase()} \n#100DaysOfCode #programming #javascript #Showerthoughts`;
+      ).toLowerCase()} \n\n#100DaysOfCode #programming #javascript #Showerthoughts`;
     };
 
     Bot.tweet(Tweet());
